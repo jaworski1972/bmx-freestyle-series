@@ -106,15 +106,93 @@
   @media (max-width: 640px) { .bfec-deliver-grid { grid-template-columns: 1fr; } }
   a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #C2FF1F; outline-offset: 2px; }
   [hidden] { display: none !important; }
-  .faq-answer { overflow: hidden; }
-  .faq-answer:not([hidden]) { display: block; }
-  #faq-tabs button, [data-faq-toggle], [data-day-tab], [data-tier-tab] {
+  [data-day-tab], [data-tier-tab] {
     -webkit-appearance: none; appearance: none; font: inherit; margin: 0; border-radius: 0;
   }
-  [data-faq-toggle] { text-align: left; }
   @media (prefers-reduced-motion: reduce) {
     [style*="animation"] { animation: none !important; }
     [data-rise] { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ===== BFES FAQ — isolated, prefixed, no dependency on other page styles ===== */
+  .bfes-faq button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+  .bfes-faq-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 28px;
+    border: 1px solid rgba(255,255,255,0.12);
+    width: fit-content;
+    max-width: 100%;
+  }
+  .bfes-faq-tab {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 15px 26px;
+    min-height: 44px;
+    background: transparent;
+    color: rgba(255,255,255,0.6);
+  }
+  .bfes-faq-tab[aria-selected="true"] {
+    background: #C2FF1F;
+    color: #0A0A0A;
+  }
+  .bfes-faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .bfes-faq-question {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 44px;
+    padding: 24px 4px;
+  }
+  .bfes-faq-question-text {
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 700;
+    font-size: clamp(16px, 1.8vw, 21px);
+    text-transform: uppercase;
+    line-height: 1.1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .bfes-faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    font-family: 'Archivo Expanded', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: #C2FF1F;
+    width: 26px;
+  }
+  .bfes-faq-answer-inner {
+    padding: 0 4px 26px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.65);
+    max-width: 760px;
+  }
+  @media (max-width: 480px) {
+    .bfes-faq-tabs { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
+    .bfes-faq-tab { padding: 12px 10px; font-size: 12px; }
   }
 </style>
 </helmet>
@@ -523,27 +601,61 @@
         <h2 style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(36px,6vw,84px);line-height:0.9;letter-spacing:-0.02em;text-transform:uppercase;">FAQ</h2>
       </div>
 
-      <div id="faq-tabs" style="display:flex;gap:0;margin-bottom:28px;border:1px solid rgba(255,255,255,0.12);width:fit-content;flex-wrap:wrap;">
-        <button type="button" data-faq-cat="cities" aria-pressed="true" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">Cities</button>
-        <button type="button" data-faq-cat="sponsors" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">Sponsors</button>
-        <button type="button" data-faq-cat="general" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">General</button>
-      </div>
+      <div class="bfes-faq" data-bfes-faq>
+        <div class="bfes-faq-tabs" role="tablist" aria-label="FAQ categories">
+          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-cities" role="tab" aria-selected="true" aria-controls="bfes-faq-panel-cities">Cities</button>
+          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-sponsors" role="tab" aria-selected="false" aria-controls="bfes-faq-panel-sponsors">Sponsors</button>
+          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-general" role="tab" aria-selected="false" aria-controls="bfes-faq-panel-general">General</button>
+        </div>
 
-      <div id="faq-panel-cities" data-faq-panel style="display:flex;flex-direction:column;">
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-cities-0" data-faq-toggle aria-expanded="true" aria-controls="faq-a-cities-0" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">Does the host city need an existing BMX park?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">–</span></button><div id="faq-a-cities-0" class="faq-answer" role="region" aria-labelledby="faq-q-cities-0" style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">No. BMX Freestyle European Series delivers the full modular competition park as part of the event — transport, installation and dismantling all included.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-cities-1" data-faq-toggle aria-expanded="false" aria-controls="faq-a-cities-1" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">What kind of venue does the Series need?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-cities-1" class="faq-answer" role="region" aria-labelledby="faq-q-cities-1" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">A visible public square, sports plaza, festival area or comparable urban space with approximately 1,000 m² of usable footprint.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-cities-2" data-faq-toggle aria-expanded="false" aria-controls="faq-a-cities-2" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">What is the hosting fee model?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-cities-2" class="faq-answer" role="region" aria-labelledby="faq-q-cities-2" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">The model is discussed individually with each city based on venue, calendar slot and local context. Contact cities@bmxseries.com to start the conversation.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-cities-3" data-faq-toggle aria-expanded="false" aria-controls="faq-a-cities-3" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">When should cities reach out?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-cities-3" class="faq-answer" role="region" aria-labelledby="faq-q-cities-3" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">Now. City conversations for the 2027 season are active. The expression of interest deadline is 31 December 2026 — but the best slots fill first.</div></div>
-      </div>
-      <div id="faq-panel-sponsors" data-faq-panel hidden style="display:flex;flex-direction:column;">
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-sponsors-0" data-faq-toggle aria-expanded="true" aria-controls="faq-a-sponsors-0" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">Can partners activate across multiple countries?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">–</span></button><div id="faq-a-sponsors-0" class="faq-answer" role="region" aria-labelledby="faq-q-sponsors-0" style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">Yes. The multi-stop model supports both series-wide visibility and local stop activation. Series and Title partners travel with the series across all cities.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-sponsors-1" data-faq-toggle aria-expanded="false" aria-controls="faq-a-sponsors-1" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">Are exclusive category rights available?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-sponsors-1" class="faq-answer" role="region" aria-labelledby="faq-q-sponsors-1" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">Yes, for Series and Title partner levels. Category exclusivity is discussed individually — contact partners@bmxseries.com.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-sponsors-2" data-faq-toggle aria-expanded="false" aria-controls="faq-a-sponsors-2" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">What audience data is available?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-sponsors-2" class="faq-answer" role="region" aria-labelledby="faq-q-sponsors-2" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">78% aged 18–35, ~3.2M social reach per stop, Women's &amp; Men's categories with equal visibility. Full overview available in the partner briefing.</div></div>
-      </div>
-      <div id="faq-panel-general" data-faq-panel hidden style="display:flex;flex-direction:column;">
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-general-0" data-faq-toggle aria-expanded="true" aria-controls="faq-a-general-0" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">What is BMX Freestyle Park?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">–</span></button><div id="faq-a-general-0" class="faq-answer" role="region" aria-labelledby="faq-q-general-0" style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">An Olympic discipline since Tokyo 2020, also at Paris 2024 and planned for LA 2028. Riders perform tricks on a modular park course, judged on difficulty, execution and style.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-general-1" data-faq-toggle aria-expanded="false" aria-controls="faq-a-general-1" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">Who is behind BMX Freestyle European Series?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-general-1" class="faq-answer" role="region" aria-labelledby="faq-q-general-1" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">BMX Freestyle European Series is developed by Urban Sports Foundation — an experienced team of sports event producers with a track record in international competitions and urban sports festivals.</div></div>
-        <div style="border-bottom:1px solid rgba(255,255,255,0.1);"><button type="button" id="faq-q-general-2" data-faq-toggle aria-expanded="false" aria-controls="faq-a-general-2" style="width:100%;text-align:left;background:none;border:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;"><span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">Is BMX Freestyle European Series committed to sustainability and equality?</span><span data-faq-sign style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">+</span></button><div id="faq-a-general-2" class="faq-answer" role="region" aria-labelledby="faq-q-general-2" hidden style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">Yes. Equal prize money for Women's and Men's categories, a reusable modular park built for multiple stops, accessible venues, and a culture programme built entirely on local DJs, musicians and graffiti artists in every host city.</div></div>
+        <div id="bfes-faq-panel-cities" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-cities" aria-hidden="false">
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-0" id="bfes-faq-question-cities-0"><span class="bfes-faq-question-text">Does the host city need an existing BMX park?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-cities-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-0" hidden><div class="bfes-faq-answer-inner">No. BMX Freestyle European Series delivers the full modular competition park as part of the event — transport, installation and dismantling all included.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-1" id="bfes-faq-question-cities-1"><span class="bfes-faq-question-text">What kind of venue does the Series need?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-cities-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-1" hidden><div class="bfes-faq-answer-inner">A visible public square, sports plaza, festival area or comparable urban space with approximately 1,000 m² of usable footprint.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-2" id="bfes-faq-question-cities-2"><span class="bfes-faq-question-text">What is the hosting fee model?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-cities-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-2" hidden><div class="bfes-faq-answer-inner">The model is discussed individually with each city based on venue, calendar slot and local context. Contact cities@bmxseries.com to start the conversation.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-3" id="bfes-faq-question-cities-3"><span class="bfes-faq-question-text">When should cities reach out?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-cities-3" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-3" hidden><div class="bfes-faq-answer-inner">Now. City conversations for the 2027 season are active. The expression of interest deadline is 31 December 2026 — but the best slots fill first.</div></div>
+          </div>
+        </div>
+
+        <div id="bfes-faq-panel-sponsors" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-sponsors" aria-hidden="true" hidden>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-0" id="bfes-faq-question-sponsors-0"><span class="bfes-faq-question-text">Can partners activate across multiple countries?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-sponsors-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-0" hidden><div class="bfes-faq-answer-inner">Yes. The multi-stop model supports both series-wide visibility and local stop activation. Series and Title partners travel with the series across all cities.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-1" id="bfes-faq-question-sponsors-1"><span class="bfes-faq-question-text">Are exclusive category rights available?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-sponsors-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-1" hidden><div class="bfes-faq-answer-inner">Yes, for Series and Title partner levels. Category exclusivity is discussed individually — contact partners@bmxseries.com.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-2" id="bfes-faq-question-sponsors-2"><span class="bfes-faq-question-text">What audience data is available?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-sponsors-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-2" hidden><div class="bfes-faq-answer-inner">78% aged 18–35, ~3.2M social reach per stop, Women's &amp; Men's categories with equal visibility. Full overview available in the partner briefing.</div></div>
+          </div>
+        </div>
+
+        <div id="bfes-faq-panel-general" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-general" aria-hidden="true" hidden>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-0" id="bfes-faq-question-general-0"><span class="bfes-faq-question-text">What is BMX Freestyle Park?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-general-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-0" hidden><div class="bfes-faq-answer-inner">An Olympic discipline since Tokyo 2020, also at Paris 2024 and planned for LA 2028. Riders perform tricks on a modular park course, judged on difficulty, execution and style.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-1" id="bfes-faq-question-general-1"><span class="bfes-faq-question-text">Who is behind BMX Freestyle European Series?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-general-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-1" hidden><div class="bfes-faq-answer-inner">BMX Freestyle European Series is developed by Urban Sports Foundation — an experienced team of sports event producers with a track record in international competitions and urban sports festivals.</div></div>
+          </div>
+          <div class="bfes-faq-item">
+            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-2" id="bfes-faq-question-general-2"><span class="bfes-faq-question-text">Is BMX Freestyle European Series committed to sustainability and equality?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
+            <div id="bfes-faq-answer-general-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-2" hidden><div class="bfes-faq-answer-inner">Yes. Equal prize money for Women's and Men's categories, a reusable modular park built for multiple stops, accessible venues, and a culture programme built entirely on local DJs, musicians and graffiti artists in every host city.</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
