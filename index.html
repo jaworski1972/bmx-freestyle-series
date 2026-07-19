@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="/js/app.js" defer></script>
+<script src="/js/dc-runtime.js"></script>
 </head>
 <body>
+<x-dc>
 <helmet>
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/img/apple-touch-icon.png">
@@ -31,175 +32,13 @@
   @keyframes bfec-rise { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes bfec-kenburns { from { transform: scale(1.06); } to { transform: scale(1.18); } }
   image-slot { display:block; }
-  html { scroll-behavior: smooth; }
-  section[id] { scroll-margin-top: 84px; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  .hv1:hover { color:#C2FF1F; }
-  .hv2:hover { color:#C2FF1F; }
-  .hv3:hover { color:#C2FF1F; }
-  .hv4:hover { color:#C2FF1F; }
-  .hv5:hover { color:#C2FF1F; }
-  .hv6:hover { background:#fff; }
-  .hv7:hover { color:#C2FF1F; }
-  .hv8:hover { color:#C2FF1F; }
-  .hv9:hover { color:#C2FF1F; }
-  .hv10:hover { color:#C2FF1F; }
-  .hv11:hover { color:#C2FF1F; }
-  .hv12:hover { background:#fff; }
-  .hv13:hover { border-color:#7C5CFF;color:#7C5CFF; }
-  .hv14:hover { border-color:#C2FF1F; }
-  .hv15:hover { background:#fff; }
-  .hv16:hover { border-color:#7C5CFF; }
-  .hv17:hover { background:#fff;color:#0A0A0A; }
-  .hv18:hover { background:rgba(194,255,31,0.03); }
-  .hv19:hover { background:rgba(194,255,31,0.03); }
-  .hv20:hover { background:rgba(194,255,31,0.03); }
-  .hv21:hover { background:rgba(194,255,31,0.03); }
-  .hv22:hover { background:rgba(194,255,31,0.03); }
-  .hv23:hover { background:rgba(194,255,31,0.03); }
-  .hv24:hover { background:rgba(194,255,31,0.03); }
-  .hv25:hover { background:rgba(194,255,31,0.03); }
-  .hv26:hover { background:rgba(194,255,31,0.03); }
-  .hv27:hover { background:rgba(194,255,31,0.03); }
-  .hv28:hover { background:rgba(194,255,31,0.03); }
-  .hv29:hover { background:rgba(194,255,31,0.03); }
-  .hv30:hover { background:#101010; }
-  .hv31:hover { background:#101010; }
-  .hv32:hover { background:#101010; }
-  .hv33:hover { background:#101010; }
-  .hv34:hover { background:#101010; }
-  .hv35:hover { background:#101010; }
-  .hv36:hover { background:#101010; }
-  .hv37:hover { background:#101010; }
-  .hv38:hover { background:#101010; }
-  .hv39:hover { background:#101010; }
-  .hv40:hover { background:#101010; }
-  .hv41:hover { background:#101010; }
-  .hv42:hover { background:#101010; }
-  .hv43:hover { background:#101010; }
-  .hv44:hover { background:#101010; }
-  .hv45:hover { background:#101010; }
-  .hv46:hover { background:#101010; }
-  .hv47:hover { background:#101010; }
-  .hv48:hover { background:#101010; }
-  .hv49:hover { background:#101010; }
-  .hv50:hover { background:#fff; }
-  .hv51:hover { color:#C2FF1F; }
-  .hv52:hover { background:#0A0A0A; }
-  .hv53:hover { background:#0A0A0A; }
-  .hv54:hover { background:#0A0A0A; }
-  .hv55:hover { background:#0A0A0A; }
-  .hv56:hover { color:#C2FF1F; }
-  .hv57:hover { color:#C2FF1F; }
-  .hv58:hover { color:#C2FF1F; }
-  .hv59:hover { color:#C2FF1F; }
-  .hv60:hover { color:#C2FF1F; }
-  .hv61:hover { color:#C2FF1F; }
-  .hv62:hover { color:#C2FF1F; }
-  .hv63:hover { background:#fff; }
-  @media (max-width: 860px) { .only-desktop { display: none !important; } }
-  @media (min-width: 861px) { .only-mobile { display: none !important; } }
-  .bfec-gallery-grid { grid-template-columns: repeat(4,1fr); grid-auto-rows: 200px; }
-  @media (max-width: 860px) { .bfec-gallery-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 150px; } }
-  .bfec-deliver-grid { grid-template-columns: repeat(4,1fr); }
-  @media (max-width: 1024px) { .bfec-deliver-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 640px) { .bfec-deliver-grid { grid-template-columns: 1fr; } }
-  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #C2FF1F; outline-offset: 2px; }
-  [hidden] { display: none !important; }
-  [data-day-tab], [data-tier-tab] {
-    -webkit-appearance: none; appearance: none; font: inherit; margin: 0; border-radius: 0;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    [style*="animation"] { animation: none !important; }
-    [data-rise] { opacity: 1 !important; transform: none !important; }
-  }
-
-  /* ===== BFES FAQ — isolated, prefixed, no dependency on other page styles ===== */
-  .bfes-faq button {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    background: none;
-    color: inherit;
-    font: inherit;
-    text-align: inherit;
-    line-height: inherit;
-    cursor: pointer;
-  }
-  .bfes-faq-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin-bottom: 28px;
-    border: 1px solid rgba(255,255,255,0.12);
-    width: fit-content;
-    max-width: 100%;
-  }
-  .bfes-faq-tab {
-    font-family: 'Archivo Expanded', sans-serif;
-    font-weight: 800;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 15px 26px;
-    min-height: 44px;
-    background: transparent;
-    color: rgba(255,255,255,0.6);
-  }
-  .bfes-faq-tab[aria-selected="true"] {
-    background: #C2FF1F;
-    color: #0A0A0A;
-  }
-  .bfes-faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .bfes-faq-question {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    min-height: 44px;
-    padding: 24px 4px;
-  }
-  .bfes-faq-question-text {
-    font-family: 'Archivo Expanded', sans-serif;
-    font-weight: 700;
-    font-size: clamp(16px, 1.8vw, 21px);
-    text-transform: uppercase;
-    line-height: 1.1;
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-  .bfes-faq-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-    font-family: 'Archivo Expanded', sans-serif;
-    font-weight: 900;
-    font-size: 26px;
-    color: #C2FF1F;
-    width: 26px;
-  }
-  .bfes-faq-answer-inner {
-    padding: 0 4px 26px;
-    font-size: 15px;
-    line-height: 1.65;
-    color: rgba(255,255,255,0.65);
-    max-width: 760px;
-  }
-  @media (max-width: 480px) {
-    .bfes-faq-tabs { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; }
-    .bfes-faq-tab { padding: 12px 10px; font-size: 12px; }
-  }
 </style>
+<script src="/js/image-slot.js"></script>
 </helmet>
 
-<div id="page-root" style="background:#0A0A0A;color:#fff;font-family:'Archivo',sans-serif;overflow-x:hidden;position:relative;">
+<div ref="{{ rootRef }}" style="background:#0A0A0A;color:#fff;font-family:'Archivo',sans-serif;overflow-x:hidden;position:relative;">
 
-  <div style="position:fixed;inset:0;z-index:9000;pointer-events:none;mix-blend-mode:overlay;opacity:0.05;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+  <div style="position:fixed;inset:0;z-index:9000;pointer-events:none;mix-blend-mode:overlay;opacity:0.05;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' sc-camel-base-frequency='0.8' sc-camel-num-octaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
 
   <!-- TOP TICKER -->
   <div style="background:#C2FF1F;color:#0A0A0A;overflow:hidden;white-space:nowrap;border-bottom:2px solid #0A0A0A;">
@@ -213,43 +52,55 @@
     <a href="#hero" style="display:flex;align-items:center;text-decoration:none;">
       <img src="/img/logo-small.webp" alt="BMX Freestyle European Series" style="height:44px;width:auto;display:block;">
     </a>
-    <ul class="only-desktop" style="display:flex;list-style:none;gap:30px;">
-      <li><a href="#pathways" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" class="hv1">Cities</a></li>
-      <li><a href="#partnership" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" class="hv2">Sponsors</a></li>
-      <li><a href="#schedule" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" class="hv3">Format</a></li>
-      <li><a href="#commitments" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" class="hv4">Values</a></li>
-      <li><a href="#faq" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" class="hv5">FAQ</a></li>
-    </ul>
-    <a href="#final-cta" class="only-desktop hv6" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:12px 22px;text-decoration:none;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);">Get in Touch</a>
-    <button type="button" class="only-mobile" data-menu-open aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;background:transparent;border:none;cursor:pointer;padding:0;margin:-2px -8px 0 0;">
-      <span style="display:block;width:26px;height:2.5px;background:#fff;"></span>
-      <span style="display:block;width:26px;height:2.5px;background:#fff;"></span>
-      <span style="display:block;width:26px;height:2.5px;background:#C2FF1F;"></span>
-    </button>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <ul style="display:flex;list-style:none;gap:30px;">
+        <li><a href="#pathways" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" style-hover="color:#C2FF1F;">Cities</a></li>
+        <li><a href="#partnership" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" style-hover="color:#C2FF1F;">Sponsors</a></li>
+        <li><a href="#schedule" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" style-hover="color:#C2FF1F;">Format</a></li>
+        <li><a href="#commitments" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" style-hover="color:#C2FF1F;">Values</a></li>
+        <li><a href="#faq" style="font-family:'Space Mono',monospace;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);text-decoration:none;" style-hover="color:#C2FF1F;">FAQ</a></li>
+      </ul>
+    </sc-if>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <a href="#final-cta" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;padding:12px 22px;text-decoration:none;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);" style-hover="background:#fff;">Get in Touch</a>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button sc-camel-on-click="{{ openMenu }}" aria-label="Open menu" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:46px;height:46px;background:transparent;border:none;cursor:pointer;padding:0;margin:-2px -8px 0 0;">
+        <span style="display:block;width:26px;height:2.5px;background:#fff;"></span>
+        <span style="display:block;width:26px;height:2.5px;background:#fff;"></span>
+        <span style="display:block;width:26px;height:2.5px;background:#C2FF1F;"></span>
+      </button>
+    </sc-if>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu" hidden style="position:fixed;inset:0;z-index:9600;background:#0A0A0A;flex-direction:column;padding:clamp(20px,6vw,40px);">
-    <div style="display:flex;align-items:center;justify-content:space-between;height:46px;margin-bottom:clamp(30px,8vw,56px);">
-      <img src="/img/logo-small.webp" alt="BMX Freestyle European Series" style="height:38px;width:auto;display:block;">
-      <button type="button" data-menu-close aria-label="Close menu" style="width:46px;height:46px;background:transparent;border:1.5px solid rgba(255,255,255,0.25);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:9600;background:#0A0A0A;display:flex;flex-direction:column;padding:clamp(20px,6vw,40px);">
+      <div style="display:flex;align-items:center;justify-content:space-between;height:46px;margin-bottom:clamp(30px,8vw,56px);">
+        <img src="/img/logo-small.webp" alt="BMX Freestyle European Series" style="height:38px;width:auto;display:block;">
+        <button sc-camel-on-click="{{ closeMenu }}" aria-label="Close menu" style="width:46px;height:46px;background:transparent;border:1.5px solid rgba(255,255,255,0.25);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+      </div>
+      <nav style="display:flex;flex-direction:column;">
+        <a href="#pathways" sc-camel-on-click="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" style-hover="color:#C2FF1F;">Cities <span style="color:#C2FF1F;">→</span></a>
+        <a href="#partnership" sc-camel-on-click="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" style-hover="color:#C2FF1F;">Sponsors <span style="color:#C2FF1F;">→</span></a>
+        <a href="#schedule" sc-camel-on-click="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" style-hover="color:#C2FF1F;">Format <span style="color:#C2FF1F;">→</span></a>
+        <a href="#commitments" sc-camel-on-click="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" style-hover="color:#C2FF1F;">Values <span style="color:#C2FF1F;">→</span></a>
+        <a href="#faq" sc-camel-on-click="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" style-hover="color:#C2FF1F;">FAQ <span style="color:#C2FF1F;">→</span></a>
+      </nav>
+      <a href="#final-cta" sc-camel-on-click="{{ closeMenu }}" style="margin-top:auto;background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;padding:20px;text-decoration:none;text-align:center;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);">Get in Touch →</a>
     </div>
-    <nav style="display:flex;flex-direction:column;">
-      <a href="#pathways" data-menu-link style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" class="hv7">Cities <span style="color:#C2FF1F;">→</span></a>
-      <a href="#partnership" data-menu-link style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" class="hv8">Sponsors <span style="color:#C2FF1F;">→</span></a>
-      <a href="#schedule" data-menu-link style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" class="hv9">Format <span style="color:#C2FF1F;">→</span></a>
-      <a href="#commitments" data-menu-link style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" class="hv10">Values <span style="color:#C2FF1F;">→</span></a>
-      <a href="#faq" data-menu-link style="display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(28px,8vw,44px);text-transform:uppercase;color:#fff;text-decoration:none;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.1);" class="hv11">FAQ <span style="color:#C2FF1F;">→</span></a>
-    </nav>
-    <a href="#final-cta" data-menu-link style="margin-top:auto;background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:16px;letter-spacing:0.04em;text-transform:uppercase;padding:20px;text-decoration:none;text-align:center;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);">Get in Touch →</a>
-  </div>
+  </sc-if>
 
   <!-- HERO -->
   <section id="hero" style="position:relative;min-height:calc(100vh - 110px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,72px);overflow:hidden;background:#0A0A0A;">
-    <div id="hero-parallax" style="position:absolute;inset:-10% 0 -2% 0;z-index:0;will-change:transform;overflow:hidden;background:#0A0A0A url(&quot;/img/hero-bg.webp&quot;) center/cover;">
+    <div ref="{{ heroRef }}" style="position:absolute;inset:-10% 0 -2% 0;z-index:0;will-change:transform;overflow:hidden;background:#0A0A0A url(&quot;/img/hero-bg.webp&quot;) center/cover;">
       <img src="/img/hero-fg.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(0.9);z-index:0;">
-      <iframe class="only-desktop" src="https://www.youtube.com/embed/E552yYoDn_E?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=E552yYoDn_E&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;showinfo=0&amp;iv_load_policy=3" title="BMX Series promotional video" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:122%;min-width:217vh;transform:translate(-50%,-50%);border:0;pointer-events:none;z-index:1;filter:grayscale(1) contrast(1.06) brightness(0.9);"></iframe>
-      <iframe class="only-mobile" src="https://www.youtube.com/embed/E552yYoDn_E?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=E552yYoDn_E&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;showinfo=0&amp;iv_load_policy=3" title="BMX Series promotional video" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;top:50%;left:50%;width:190vw;height:106.9vw;min-height:100%;min-width:100%;transform:translate(-50%,-50%);border:0;pointer-events:none;z-index:1;filter:grayscale(1) contrast(1.06) brightness(0.9);"></iframe>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <iframe src="https://www.youtube.com/embed/E552yYoDn_E?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=E552yYoDn_E&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;showinfo=0&amp;iv_load_policy=3" title="BMX Series" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:122%;min-width:217vh;transform:translate(-50%,-50%);border:0;pointer-events:none;z-index:1;filter:grayscale(1) contrast(1.06) brightness(0.9);"></iframe>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <iframe src="https://www.youtube.com/embed/E552yYoDn_E?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=E552yYoDn_E&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;showinfo=0&amp;iv_load_policy=3" title="BMX Series" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;top:50%;left:50%;width:190vw;height:106.9vw;min-height:100%;min-width:100%;transform:translate(-50%,-50%);border:0;pointer-events:none;z-index:1;filter:grayscale(1) contrast(1.06) brightness(0.9);"></iframe>
+      </sc-if>
     </div>
     <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 80% 0%,rgba(124,92,255,0.28),transparent 55%),linear-gradient(0deg,#0A0A0A 4%,rgba(10,10,10,0.35) 45%,rgba(10,10,10,0.15) 100%);"></div>
 
@@ -267,34 +118,29 @@
         <strong style="color:#fff;">4–6 European cities</strong> &nbsp;//&nbsp; May–September 2027
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
-        <a href="#pathways" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:17px 30px;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);" class="hv12">For Cities →</a>
-        <a href="#partnership" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:17px 30px;text-decoration:none;" class="hv13">For Sponsors →</a>
+        <a href="#pathways" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:17px 30px;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);" style-hover="background:#fff;">For Cities →</a>
+        <a href="#pathways" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:17px 30px;text-decoration:none;" style-hover="border-color:#7C5CFF;color:#7C5CFF;">For Sponsors →</a>
       </div>
     </div>
 
     <!-- COUNTDOWN -->
     <div style="position:relative;z-index:2;margin-top:clamp(30px,5vw,56px);display:flex;align-items:flex-end;gap:clamp(10px,2vw,22px);flex-wrap:wrap;">
-      <div class="only-desktop" style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);writing-mode:vertical-rl;transform:rotate(180deg);padding-bottom:4px;">Applications close</div>
-      <div class="only-mobile" style="width:100%;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:2px;">Applications close in</div>
-      <div id="bfec-countdown" data-target="2026-12-31T23:59:59Z" style="display:flex;gap:clamp(10px,2vw,22px);flex-wrap:wrap;">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);writing-mode:vertical-rl;transform:rotate(180deg);padding-bottom:4px;">Applications close</div>
+      </sc-if>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:2px;">Applications close in</div>
+      </sc-if>
+      <sc-for list="{{ countdown }}" as="unit" hint-placeholder-count="4">
         <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;gap:5px;" data-cd-digits="d"><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">1</div><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">6</div><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">5</div></div>
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Days</div>
+          <div style="display:flex;gap:5px;">
+            <sc-for list="{{ unit.digits }}" as="dig" hint-placeholder-count="2">
+              <div style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">{{ dig }}</div>
+            </sc-for>
+          </div>
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);">{{ unit.label }}</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;gap:5px;" data-cd-digits="h"><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">0</div><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">4</div></div>
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Hrs</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;gap:5px;" data-cd-digits="m"><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">0</div><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">0</div></div>
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Min</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="display:flex;gap:5px;" data-cd-digits="s"><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">4</div><div class="cd-digit" style="width:clamp(34px,4.5vw,58px);height:clamp(46px,6vw,76px);background:#141414;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,44px);color:#C2FF1F;">4</div></div>
-          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.45);">Sec</div>
-        </div>
-      </div>
-      <div id="bfec-countdown-closed" hidden style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#C2FF1F;">Applications are now closed</div>
+      </sc-for>
     </div>
   </section>
 
@@ -308,11 +154,12 @@
   <!-- STATS GRID -->
   <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:clamp(36px,5vw,60px) clamp(20px,4vw,48px);">
     <div data-rise="" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(255,255,255,0.08);">
-      <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">4–6</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Stops per season</div></div>
-      <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">50K+</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Spectators per stop</div></div>
-      <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">60+</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Riders · 30+ countries</div></div>
-      <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">W&amp;M</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Two categories, equal</div></div>
-      <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">~1000m²</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Modular park delivered</div></div>
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="5">
+        <div style="background:#0A0A0A;padding:24px 20px;">
+          <div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#fff;">{{ s.v }}</div>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">{{ s.l }}</div>
+        </div>
+      </sc-for>
     </div>
   </div>
 
@@ -325,34 +172,32 @@
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;">
-        <div data-rise="" style="position:relative;background:#101010;border:1px solid rgba(194,255,31,0.3);padding:clamp(28px,3.5vw,46px);overflow:hidden;" class="hv14">
+        <div data-rise="" style="position:relative;background:#101010;border:1px solid rgba(194,255,31,0.3);padding:clamp(28px,3.5vw,46px);overflow:hidden;" style-hover="border-color:#C2FF1F;">
           <div style="position:absolute;top:-30px;right:-20px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:160px;color:rgba(194,255,31,0.06);line-height:1;">01</div>
-          <img id="bfec-cities" src="/img/gallery-cities.webp" alt="Host city crowd at a BMX Freestyle European Series stop" loading="lazy" style="position:relative;display:block;width:calc(100% + 2*clamp(28px,3.5vw,46px));aspect-ratio:2.6/1;height:auto;margin:calc(-1*clamp(28px,3.5vw,46px)) calc(-1*clamp(28px,3.5vw,46px)) 26px;object-fit:cover;object-position:center;">
+          <image-slot id="bfec-cities" fit="cover" shape="rect" src="/img/gallery-cities.webp" placeholder="Drop photo — host city / packed crowd" style="position:relative;display:block;width:calc(100% + 2*clamp(28px,3.5vw,46px));aspect-ratio:2.6/1;height:auto;margin:calc(-1*clamp(28px,3.5vw,46px)) calc(-1*clamp(28px,3.5vw,46px)) 26px;"></image-slot>
           <div style="display:inline-block;background:#C2FF1F;color:#0A0A0A;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;transform:skewX(-8deg);margin-bottom:22px;">For Host Cities</div>
           <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(24px,2.6vw,34px);line-height:0.96;text-transform:uppercase;margin-bottom:16px;position:relative;">Your City. The World Watching.</h3>
           <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:22px;position:relative;">A turnkey BMX Freestyle Park event for municipalities and sport departments. We bring the park, production and athletes — you provide the stage.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px;position:relative;">
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#C2FF1F;font-weight:900;flex:none;">→</span>Zero infrastructure cost — full park delivered</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#C2FF1F;font-weight:900;flex:none;">→</span>International broadcast &amp; media coverage</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#C2FF1F;font-weight:900;flex:none;">→</span>3-day festival format with youth engagement</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#C2FF1F;font-weight:900;flex:none;">→</span>Judging framework aligned with international competition standards</li>
+            <sc-for list="{{ citiesList }}" as="li" hint-placeholder-count="4">
+              <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#C2FF1F;font-weight:900;flex:none;">→</span>{{ li }}</li>
+            </sc-for>
           </ul>
-          <a href="#final-cta" style="display:inline-block;background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);position:relative;" class="hv15">Apply to Host a Stop →</a>
+          <a href="#final-cta" style="display:inline-block;background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);position:relative;" style-hover="background:#fff;">Apply to Host a Stop →</a>
         </div>
 
-        <div data-rise="" style="position:relative;background:#101010;border:1px solid rgba(124,92,255,0.35);padding:clamp(28px,3.5vw,46px);overflow:hidden;" class="hv16">
+        <div data-rise="" style="position:relative;background:#101010;border:1px solid rgba(124,92,255,0.35);padding:clamp(28px,3.5vw,46px);overflow:hidden;" style-hover="border-color:#7C5CFF;">
           <div style="position:absolute;top:-30px;right:-20px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:160px;color:rgba(124,92,255,0.08);line-height:1;">02</div>
-          <img id="bfec-sponsors" src="/img/gallery-sponsors.webp" alt="Young audience and brand activation at a BMX Freestyle European Series stop" loading="lazy" style="position:relative;display:block;width:calc(100% + 2*clamp(28px,3.5vw,46px));aspect-ratio:2.6/1;height:auto;margin:calc(-1*clamp(28px,3.5vw,46px)) calc(-1*clamp(28px,3.5vw,46px)) 26px;object-fit:cover;object-position:center;">
+          <image-slot id="bfec-sponsors" fit="cover" shape="rect" src="/img/gallery-sponsors.webp" placeholder="Drop photo — young audience / brand activation" style="position:relative;display:block;width:calc(100% + 2*clamp(28px,3.5vw,46px));aspect-ratio:2.6/1;height:auto;margin:calc(-1*clamp(28px,3.5vw,46px)) calc(-1*clamp(28px,3.5vw,46px)) 26px;"></image-slot>
           <div style="display:inline-block;background:#7C5CFF;color:#fff;font-family:'Space Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:6px 12px;transform:skewX(-8deg);margin-bottom:22px;">For Sponsors</div>
           <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(24px,2.6vw,34px);line-height:0.96;text-transform:uppercase;margin-bottom:16px;position:relative;">Connect With a New Generation.</h3>
           <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.6);margin-bottom:22px;position:relative;">Unmatched access to 18–35 audiences across Europe through sport, culture and broadcast — in multiple markets per season.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px;position:relative;">
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#7C5CFF;font-weight:900;flex:none;">→</span>78% audience aged 18–35</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#7C5CFF;font-weight:900;flex:none;">→</span>~3.2M social reach per stop</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#7C5CFF;font-weight:900;flex:none;">→</span>4–6 European markets per season</li>
-            <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#7C5CFF;font-weight:900;flex:none;">→</span>Stop, Series &amp; Title partnership levels</li>
+            <sc-for list="{{ sponsorsList }}" as="li" hint-placeholder-count="4">
+              <li style="display:flex;gap:11px;font-size:14px;color:rgba(255,255,255,0.82);line-height:1.45;"><span style="color:#7C5CFF;font-weight:900;flex:none;">→</span>{{ li }}</li>
+            </sc-for>
           </ul>
-          <a href="#final-cta" style="display:inline-block;background:#7C5CFF;color:#fff;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);position:relative;" class="hv17">Explore Partnerships →</a>
+          <a href="#final-cta" style="display:inline-block;background:#7C5CFF;color:#fff;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:14px 24px;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);position:relative;" style-hover="background:#fff;color:#0A0A0A;">Explore Partnerships →</a>
         </div>
       </div>
     </div>
@@ -366,29 +211,22 @@
         <h2 style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(36px,6vw,84px);line-height:0.9;letter-spacing:-0.02em;text-transform:uppercase;">Three Days.<br>One City.</h2>
       </div>
 
-      <div id="schedule-tabs" style="display:flex;gap:0;margin-bottom:32px;border:1px solid rgba(255,255,255,0.12);width:fit-content;">
-        <button type="button" data-day-tab="fri" aria-pressed="true" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 28px;border:none;cursor:pointer;">Friday</button>
-        <button type="button" data-day-tab="sat" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 28px;border:none;cursor:pointer;">Saturday</button>
-        <button type="button" data-day-tab="sun" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 28px;border:none;cursor:pointer;">Sunday</button>
+      <div style="display:flex;gap:0;margin-bottom:32px;border:1px solid rgba(255,255,255,0.12);width:fit-content;">
+        <sc-for list="{{ days }}" as="d" hint-placeholder-count="3">
+          <button sc-camel-on-click="{{ d.onClick }}" style="background:{{ d.bg }};color:{{ d.fg }};font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 28px;border:none;cursor:pointer;">{{ d.label }}</button>
+        </sc-for>
       </div>
 
-      <div id="schedule-panel-fri" data-day-panel style="display:flex;flex-direction:column;">
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv18"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">10:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Open Sessions</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Park opens — training, public welcome</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv19"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">14:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">City Ride</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Athletes tour landmark city locations</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv20"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">17:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Youth Clinic</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Local riders training with pro athletes</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv21"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">20:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Opening Ceremony</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Welcome concert &amp; city celebration</div></div></div>
-      </div>
-      <div id="schedule-panel-sat" data-day-panel hidden style="display:flex;flex-direction:column;">
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv22"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">10:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Qualifications</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Women's &amp; Men's qualification rounds</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv23"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">14:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Culture &amp; Music</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Street art activations, live music stage</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv24"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">18:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Top 8 Confirmed</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Results announced — Women's &amp; Men's finalists</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv25"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">20:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Sponsor Village</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Evening programme &amp; activations</div></div></div>
-      </div>
-      <div id="schedule-panel-sun" data-day-panel hidden style="display:flex;flex-direction:column;">
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv26"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">12:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Warm-Up</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Final park preparation</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv27"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">15:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Women's Final</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Livestream begins</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv28"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">17:00</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Men's Final</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Peak broadcast window</div></div></div>
-        <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" class="hv29"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">19:30</div><div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">Podium Ceremony</div><div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">Awards &amp; closing concert</div></div></div>
+      <div style="display:flex;flex-direction:column;">
+        <sc-for list="{{ scheduleRows }}" as="r" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:baseline;" style-hover="background:rgba(194,255,31,0.03);">
+            <div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(20px,2.4vw,30px);color:#C2FF1F;">{{ r.time }}</div>
+            <div>
+              <div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(17px,1.9vw,23px);text-transform:uppercase;letter-spacing:0.01em;">{{ r.event }}</div>
+              <div style="font-size:14px;color:rgba(255,255,255,0.55);margin-top:4px;">{{ r.sub }}</div>
+            </div>
+          </div>
+        </sc-for>
       </div>
     </div>
   </section>
@@ -404,18 +242,18 @@
         <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.05em;color:#C2FF1F;max-width:280px;line-height:1.6;">Riders, music, street culture &amp; 50K fans in one urban square.</div>
       </div>
 
-      <div data-rise="" class="bfec-gallery-grid" style="display:grid;gap:12px;">
-        <div style="grid-column:span 2;grid-row:span 2;position:relative;overflow:hidden;" >
-          <img id="bfec-g1" src="/img/gallery-1.webp" alt="BMX Freestyle rider mid-trick" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;">
+      <div data-rise="" style="display:grid;grid-template-columns:{{ galleryCols }};grid-auto-rows:{{ galleryRow }};gap:12px;">
+        <div style="grid-column:span 2;grid-row:span 2;position:relative;overflow:hidden;" style-hover="">
+          <image-slot id="bfec-g1" fit="cover" shape="rect" src="/img/gallery-1.webp" placeholder="Drop photo — rider mid-trick" style="display:block;width:100%;height:100%;"></image-slot>
         </div>
         <div style="position:relative;overflow:hidden;">
-          <img id="bfec-g2" src="/img/gallery-2.webp" alt="Crowd at a BMX Freestyle European Series event" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <image-slot id="bfec-g2" fit="cover" shape="rect" src="/img/gallery-2.webp" placeholder="Drop — crowd" style="display:block;width:100%;height:100%;"></image-slot>
         </div>
         <div style="position:relative;overflow:hidden;">
-          <img id="bfec-g3" src="/img/gallery-3.webp" alt="Live music stage at a BMX Freestyle European Series stop" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <image-slot id="bfec-g3" fit="cover" shape="rect" src="/img/gallery-3.webp" placeholder="Drop — music stage" style="display:block;width:100%;height:100%;"></image-slot>
         </div>
         <div style="grid-column:span 2;position:relative;overflow:hidden;">
-          <img id="bfec-g4" src="/img/gallery-4.webp" alt="City ride and street session with BMX Freestyle riders" loading="lazy" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center;">
+          <image-slot id="bfec-g4" fit="cover" shape="rect" src="/img/gallery-4.webp" placeholder="Drop — city ride / street session" style="display:block;width:100%;height:100%;"></image-slot>
         </div>
       </div>
     </div>
@@ -429,15 +267,14 @@
         <h2 style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(36px,6vw,84px);line-height:0.9;letter-spacing:-0.02em;text-transform:uppercase;">We Bring Everything.</h2>
       </div>
 
-      <div data-rise="" class="bfec-deliver-grid" style="display:grid;gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);">
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv30"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">01</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Mobile BMX Park</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Full modular competition park (~1,000 m²), transported, installed and removed by our crew.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv31"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">02</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Sport Operations</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Competition format, judges, athlete coordination and technical sporting framework.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv32"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">03</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Production &amp; Broadcast</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Stage, PA, lighting, livestream and broadcast-ready camera package included.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv33"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">04</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Festival Programming</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">City Ride, youth clinics, music activation and community events.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv34"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">05</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">60+ International Athletes</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Elite riders from 30+ nations — filling your city's hotels and public spaces.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv35"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">06</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Communication Support</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">BFE Series visual identity, press pack, social content and co-branding.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv36"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">07</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Partner &amp; Fan Activation</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Sponsor integration, fan zones, hospitality concepts and branded experiences built into every stop.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" class="hv37"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">08</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">Event Management &amp; Safety</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Venue planning, operational schedules, accreditation, risk procedures and coordination with local services.</div></div>
+      <div data-rise="" style="display:grid;grid-template-columns:{{ deliverCols }};gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);">
+        <sc-for list="{{ deliver }}" as="d" hint-placeholder-count="8">
+          <div style="background:#0A0A0A;padding:clamp(26px,3vw,40px);position:relative;overflow:hidden;transition:background .2s;" style-hover="background:#101010;">
+            <div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">{{ d.num }}</div>
+            <div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1.15;min-height:2.3em;margin-bottom:12px;">{{ d.title }}</div>
+            <div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">{{ d.body }}</div>
+          </div>
+        </sc-for>
       </div>
     </div>
   </section>
@@ -488,9 +325,9 @@
         <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,26px);text-transform:uppercase;letter-spacing:0.01em;">On-Site Branding</h3>
       </div>
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-bottom:clamp(34px,4vw,52px);">
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv38"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">01</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Park &amp; Course Visibility</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branding across the competition park, finish area and athlete zone — seen by every spectator and every camera.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv39"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">02</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Accreditation &amp; VIP Access</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branded hospitality area with direct sightlines to the park, athlete access and networking with city officials.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv40"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">03</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete Kit Integration</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Co-branding on athlete bibs, podium and award ceremony for maximum broadcast and photo exposure.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">01</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Park &amp; Course Visibility</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branding across the competition park, finish area and athlete zone — seen by every spectator and every camera.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">02</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Accreditation &amp; VIP Access</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branded hospitality area with direct sightlines to the park, athlete access and networking with city officials.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">03</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete Kit Integration</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Co-branding on athlete bibs, podium and award ceremony for maximum broadcast and photo exposure.</div></div>
       </div>
 
       <div data-rise="" style="display:flex;align-items:center;gap:13px;margin-bottom:16px;">
@@ -498,9 +335,9 @@
         <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,26px);text-transform:uppercase;letter-spacing:0.01em;">Activations</h3>
       </div>
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-bottom:clamp(34px,4vw,52px);">
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv41"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">04</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Branded Fan Zone</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">A dedicated activation space inside the festival footprint — sampling, demos or interactive experiences for 50K+ attendees.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv42"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">05</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete Meet &amp; Greet</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Exclusive access sessions pairing your brand with the riders fans came to see.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv43"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">06</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Youth Clinic Sponsorship</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Brand association with the next generation of riders through the Friday youth clinic programme.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">04</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Branded Fan Zone</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">A dedicated activation space inside the festival footprint — sampling, demos or interactive experiences for 50K+ attendees.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">05</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete Meet &amp; Greet</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Exclusive access sessions pairing your brand with the riders fans came to see.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">06</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Youth Clinic Sponsorship</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Brand association with the next generation of riders through the Friday youth clinic programme.</div></div>
       </div>
 
       <div data-rise="" style="display:flex;align-items:center;gap:13px;margin-bottom:16px;">
@@ -508,9 +345,9 @@
         <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,26px);text-transform:uppercase;letter-spacing:0.01em;">Digital &amp; Content</h3>
       </div>
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-bottom:clamp(34px,4vw,52px);">
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv44"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">07</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete of the Stop</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branded content series following a rider through the weekend — built for social, owned by the partner.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv45"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">08</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Highlight Reels &amp; Storytelling</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Co-branded recap content distributed across BFEC channels after every stop.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv46"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">09</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Social Media Integration</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Logo and brand presence across BFEC social assets — reaching ~3.2M per stop.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">07</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Athlete of the Stop</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Branded content series following a rider through the weekend — built for social, owned by the partner.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">08</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Highlight Reels &amp; Storytelling</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Co-branded recap content distributed across BFEC channels after every stop.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">09</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Social Media Integration</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Logo and brand presence across BFEC social assets — reaching ~3.2M per stop.</div></div>
       </div>
 
       <div data-rise="" style="display:flex;align-items:center;gap:13px;margin-bottom:16px;">
@@ -518,34 +355,24 @@
         <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2.2vw,26px);text-transform:uppercase;letter-spacing:0.01em;">Broadcast &amp; Media</h3>
       </div>
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-bottom:clamp(48px,6vw,80px);">
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv47"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">10</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Livestream Branding</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">On-screen presence during the Saturday &amp; Sunday broadcast windows, including finals.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv48"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">11</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Press Kit Inclusion</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Partner mentions in official press materials distributed to host-city and international media.</div></div>
-        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" class="hv49"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">12</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Official Partner Status</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Recognition as an Official Partner of the BMX Freestyle European Series across all season communications.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">10</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Livestream Branding</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">On-screen presence during the Saturday &amp; Sunday broadcast windows, including finals.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">11</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Press Kit Inclusion</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Partner mentions in official press materials distributed to host-city and international media.</div></div>
+        <div style="background:#0A0A0A;padding:clamp(24px,2.6vw,34px);transition:background .2s;" style-hover="background:#101010;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:16px;">12</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.05;margin-bottom:10px;">Official Partner Status</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Recognition as an Official Partner of the BMX Freestyle European Series across all season communications.</div></div>
       </div>
 
       <!-- A4 Partnership tiers -->
       <div data-rise="" style="margin-bottom:18px;">
         <h3 style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(24px,3.2vw,42px);text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em;">Three Partnership Levels.</h3>
       </div>
-      <div data-rise="" id="partner-tabs" style="display:flex;gap:0;margin-bottom:0;border:1px solid rgba(255,255,255,0.12);width:fit-content;flex-wrap:wrap;">
-        <button type="button" data-tier-tab="stop" aria-pressed="true" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">Stop Partner</button>
-        <button type="button" data-tier-tab="series" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">Series Partner</button>
-        <button type="button" data-tier-tab="title" aria-pressed="false" style="background:transparent;color:rgba(255,255,255,0.6);font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">Title Partner</button>
+      <div data-rise="" style="display:flex;gap:0;margin-bottom:0;border:1px solid rgba(255,255,255,0.12);width:fit-content;flex-wrap:wrap;">
+        <sc-for list="{{ partnerTabs }}" as="t" hint-placeholder-count="3">
+          <button sc-camel-on-click="{{ t.onClick }}" style="background:{{ t.bg }};color:{{ t.fg }};font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">{{ t.label }}</button>
+        </sc-for>
       </div>
-      <div data-rise="" id="tier-panel-stop" data-tier-panel style="border:1px solid rgba(194,255,31,0.3);border-top:none;background:#101010;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-40px;right:-10px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(120px,18vw,200px);color:rgba(194,255,31,0.05);line-height:1;pointer-events:none;text-transform:uppercase;">STOP</div>
-        <h4 style="position:relative;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(26px,4vw,52px);text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em;color:#C2FF1F;margin-bottom:16px;">Stop Partner</h4>
-        <p style="position:relative;font-size:clamp(15px,1.9vw,20px);line-height:1.5;color:rgba(255,255,255,0.82);max-width:680px;">Activate at a single city. Local visibility, full activation toolkit, regional media reach.</p>
-      </div>
-      <div data-rise="" id="tier-panel-series" data-tier-panel hidden style="border:1px solid rgba(194,255,31,0.3);border-top:none;background:#101010;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-40px;right:-10px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(120px,18vw,200px);color:rgba(194,255,31,0.05);line-height:1;pointer-events:none;text-transform:uppercase;">SERIES</div>
-        <h4 style="position:relative;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(26px,4vw,52px);text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em;color:#C2FF1F;margin-bottom:16px;">Series Partner</h4>
-        <p style="position:relative;font-size:clamp(15px,1.9vw,20px);line-height:1.5;color:rgba(255,255,255,0.82);max-width:680px;">Travel with the Series across all 4–6 cities. Pan-European visibility, content rights across the season, category exclusivity available.</p>
-      </div>
-      <div data-rise="" id="tier-panel-title" data-tier-panel hidden style="border:1px solid rgba(194,255,31,0.3);border-top:none;background:#101010;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:-40px;right:-10px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(120px,18vw,200px);color:rgba(194,255,31,0.05);line-height:1;pointer-events:none;text-transform:uppercase;">TITLE</div>
-        <h4 style="position:relative;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(26px,4vw,52px);text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em;color:#C2FF1F;margin-bottom:16px;">Title Partner</h4>
-        <p style="position:relative;font-size:clamp(15px,1.9vw,20px);line-height:1.5;color:rgba(255,255,255,0.82);max-width:680px;">Your name on the series. Maximum exposure across every stop, every broadcast, every market — from launch to final.</p>
+      <div data-rise="" style="border:1px solid rgba(194,255,31,0.3);border-top:none;background:#101010;padding:clamp(28px,4vw,52px);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-40px;right:-10px;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(120px,18vw,200px);color:rgba(194,255,31,0.05);line-height:1;pointer-events:none;text-transform:uppercase;">{{ partnerActive.tag }}</div>
+        <h4 style="position:relative;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(26px,4vw,52px);text-transform:uppercase;line-height:0.95;letter-spacing:-0.01em;color:#C2FF1F;margin-bottom:16px;">{{ partnerActive.name }}</h4>
+        <p style="position:relative;font-size:clamp(15px,1.9vw,20px);line-height:1.5;color:rgba(255,255,255,0.82);max-width:680px;">{{ partnerActive.body }}</p>
       </div>
 
       <!-- A5 CTA -->
@@ -555,8 +382,8 @@
           <p style="font-size:clamp(14px,1.6vw,17px);line-height:1.55;color:rgba(255,255,255,0.6);max-width:480px;">We respond within 48 hours — with a real partnership deck, not a template.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:14px;">
-          <a href="mailto:partners@bmxseries.com" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:16px 28px;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);text-align:center;" class="hv50">Explore Partnerships →</a>
-          <a href="mailto:partners@bmxseries.com" style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.06em;color:rgba(255,255,255,0.6);text-decoration:none;text-align:center;" class="hv51">partners@bmxseries.com</a>
+          <a href="mailto:partners@bmxseries.com" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;padding:16px 28px;text-decoration:none;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);text-align:center;" style-hover="background:#fff;">Explore Partnerships →</a>
+          <a href="mailto:partners@bmxseries.com" style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.06em;color:rgba(255,255,255,0.6);text-decoration:none;text-align:center;" style-hover="color:#C2FF1F;">partners@bmxseries.com</a>
         </div>
       </div>
     </div>
@@ -572,10 +399,10 @@
       <p data-rise="" style="font-size:clamp(15px,1.9vw,20px);line-height:1.55;color:rgba(255,255,255,0.62);max-width:680px;margin-bottom:clamp(34px,5vw,56px);text-wrap:pretty;">BMX Freestyle European Series is built to leave something behind in every city — not just for three days, but for the community that hosts us.</p>
 
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);">
-        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" class="hv52"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">01</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Equal Prize Money</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Women's and Men's categories compete for identical prize money and identical visibility — on the park, in broadcast, and in every announcement.</div></div>
-        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" class="hv53"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">02</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Open To All</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Every host venue is selected and built for accessibility — dedicated access, clear sightlines and support for spectators with disabilities.</div></div>
-        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" class="hv54"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">03</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Built To Be Reused</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Our modular park is designed for reuse across the season, not single-use waste. Materials, signage and structures travel from city to city.</div></div>
-        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" class="hv55"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">04</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Local Artists, Main Stage</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">BMX Series' music and culture programme is built entirely on local talent. In every host city, the DJs, live acts and graffiti artists on site are from that city — not a touring lineup.</div></div>
+        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" style-hover="background:#0A0A0A;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">01</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Equal Prize Money</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Women's and Men's categories compete for identical prize money and identical visibility — on the park, in broadcast, and in every announcement.</div></div>
+        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" style-hover="background:#0A0A0A;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">02</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Open To All</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Every host venue is selected and built for accessibility — dedicated access, clear sightlines and support for spectators with disabilities.</div></div>
+        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" style-hover="background:#0A0A0A;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">03</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Built To Be Reused</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">Our modular park is designed for reuse across the season, not single-use waste. Materials, signage and structures travel from city to city.</div></div>
+        <div style="background:#101010;padding:clamp(26px,3vw,40px);transition:background .2s;" style-hover="background:#0A0A0A;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(40px,5vw,64px);color:transparent;-webkit-text-stroke:1.5px rgba(194,255,31,0.55);line-height:1;margin-bottom:20px;">04</div><div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);text-transform:uppercase;line-height:1;margin-bottom:12px;">Local Artists, Main Stage</div><div style="font-size:14px;line-height:1.6;color:rgba(255,255,255,0.58);">BMX Series' music and culture programme is built entirely on local talent. In every host city, the DJs, live acts and graffiti artists on site are from that city — not a touring lineup.</div></div>
       </div>
 
       <!-- B3 culture sub-block -->
@@ -601,61 +428,24 @@
         <h2 style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(36px,6vw,84px);line-height:0.9;letter-spacing:-0.02em;text-transform:uppercase;">FAQ</h2>
       </div>
 
-      <div class="bfes-faq" data-bfes-faq>
-        <div class="bfes-faq-tabs" role="tablist" aria-label="FAQ categories">
-          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-cities" role="tab" aria-selected="true" aria-controls="bfes-faq-panel-cities">Cities</button>
-          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-sponsors" role="tab" aria-selected="false" aria-controls="bfes-faq-panel-sponsors">Sponsors</button>
-          <button type="button" class="bfes-faq-tab" id="bfes-faq-tab-general" role="tab" aria-selected="false" aria-controls="bfes-faq-panel-general">General</button>
-        </div>
+      <div style="display:flex;gap:0;margin-bottom:28px;border:1px solid rgba(255,255,255,0.12);width:fit-content;flex-wrap:wrap;">
+        <sc-for list="{{ faqCats }}" as="c" hint-placeholder-count="3">
+          <button sc-camel-on-click="{{ c.onClick }}" style="background:{{ c.bg }};color:{{ c.fg }};font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:15px 26px;border:none;cursor:pointer;">{{ c.label }}</button>
+        </sc-for>
+      </div>
 
-        <div id="bfes-faq-panel-cities" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-cities" aria-hidden="false">
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-0" id="bfes-faq-question-cities-0"><span class="bfes-faq-question-text">Does the host city need an existing BMX park?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-cities-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-0" hidden><div class="bfes-faq-answer-inner">No. BMX Freestyle European Series delivers the full modular competition park as part of the event — transport, installation and dismantling all included.</div></div>
+      <div style="display:flex;flex-direction:column;">
+        <sc-for list="{{ faqRows }}" as="r" hint-placeholder-count="4">
+          <div style="border-bottom:1px solid rgba(255,255,255,0.1);">
+            <div sc-camel-on-click="{{ r.toggle }}" style="display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 4px;cursor:pointer;">
+              <span style="font-family:'Archivo Expanded',sans-serif;font-weight:700;font-size:clamp(16px,1.8vw,21px);text-transform:uppercase;line-height:1.1;">{{ r.q }}</span>
+              <span style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:26px;color:#C2FF1F;flex:none;">{{ r.sign }}</span>
+            </div>
+            <sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 4px 26px;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.65);max-width:760px;">{{ r.a }}</div>
+            </sc-if>
           </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-1" id="bfes-faq-question-cities-1"><span class="bfes-faq-question-text">What kind of venue does the Series need?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-cities-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-1" hidden><div class="bfes-faq-answer-inner">A visible public square, sports plaza, festival area or comparable urban space with approximately 1,000 m² of usable footprint.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-2" id="bfes-faq-question-cities-2"><span class="bfes-faq-question-text">What is the hosting fee model?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-cities-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-2" hidden><div class="bfes-faq-answer-inner">The model is discussed individually with each city based on venue, calendar slot and local context. Contact cities@bmxseries.com to start the conversation.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-cities-3" id="bfes-faq-question-cities-3"><span class="bfes-faq-question-text">When should cities reach out?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-cities-3" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-cities-3" hidden><div class="bfes-faq-answer-inner">Now. City conversations for the 2027 season are active. The expression of interest deadline is 31 December 2026 — but the best slots fill first.</div></div>
-          </div>
-        </div>
-
-        <div id="bfes-faq-panel-sponsors" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-sponsors" aria-hidden="true" hidden>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-0" id="bfes-faq-question-sponsors-0"><span class="bfes-faq-question-text">Can partners activate across multiple countries?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-sponsors-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-0" hidden><div class="bfes-faq-answer-inner">Yes. The multi-stop model supports both series-wide visibility and local stop activation. Series and Title partners travel with the series across all cities.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-1" id="bfes-faq-question-sponsors-1"><span class="bfes-faq-question-text">Are exclusive category rights available?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-sponsors-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-1" hidden><div class="bfes-faq-answer-inner">Yes, for Series and Title partner levels. Category exclusivity is discussed individually — contact partners@bmxseries.com.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-sponsors-2" id="bfes-faq-question-sponsors-2"><span class="bfes-faq-question-text">What audience data is available?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-sponsors-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-sponsors-2" hidden><div class="bfes-faq-answer-inner">78% aged 18–35, ~3.2M social reach per stop, Women's &amp; Men's categories with equal visibility. Full overview available in the partner briefing.</div></div>
-          </div>
-        </div>
-
-        <div id="bfes-faq-panel-general" class="bfes-faq-panel" role="tabpanel" aria-labelledby="bfes-faq-tab-general" aria-hidden="true" hidden>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-0" id="bfes-faq-question-general-0"><span class="bfes-faq-question-text">What is BMX Freestyle Park?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-general-0" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-0" hidden><div class="bfes-faq-answer-inner">An Olympic discipline since Tokyo 2020, also at Paris 2024 and planned for LA 2028. Riders perform tricks on a modular park course, judged on difficulty, execution and style.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-1" id="bfes-faq-question-general-1"><span class="bfes-faq-question-text">Who is behind BMX Freestyle European Series?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-general-1" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-1" hidden><div class="bfes-faq-answer-inner">BMX Freestyle European Series is developed by Urban Sports Foundation — an experienced team of sports event producers with a track record in international competitions and urban sports festivals.</div></div>
-          </div>
-          <div class="bfes-faq-item">
-            <h3><button type="button" class="bfes-faq-question" aria-expanded="false" aria-controls="bfes-faq-answer-general-2" id="bfes-faq-question-general-2"><span class="bfes-faq-question-text">Is BMX Freestyle European Series committed to sustainability and equality?</span><span class="bfes-faq-icon" aria-hidden="true">+</span></button></h3>
-            <div id="bfes-faq-answer-general-2" class="bfes-faq-answer" role="region" aria-labelledby="bfes-faq-question-general-2" hidden><div class="bfes-faq-answer-inner">Yes. Equal prize money for Women's and Men's categories, a reusable modular park built for multiple stops, accessible venues, and a culture programme built entirely on local DJs, musicians and graffiti artists in every host city.</div></div>
-          </div>
-        </div>
+        </sc-for>
       </div>
     </div>
   </section>
@@ -688,28 +478,26 @@
       <div>
         <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Series</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li><a href="#pathways" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv56">For Cities</a></li>
-          <li><a href="#partnership" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv57">For Sponsors</a></li>
-          <li><a href="#schedule" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv58">Format</a></li>
-          <li><a href="#faq" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv59">FAQ</a></li>
+          <li><a href="#pathways" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">For Cities</a></li>
+          <li><a href="#pathways" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">For Sponsors</a></li>
+          <li><a href="#schedule" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">Format</a></li>
+          <li><a href="#faq" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Contact</div>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
-          <li><a href="mailto:cities@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv60">cities@bmxseries.com</a></li>
-          <li><a href="mailto:partners@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv61">partners@bmxseries.com</a></li>
-          <li><a href="mailto:info@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" class="hv62">info@bmxseries.com</a></li>
+          <li><a href="mailto:cities@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">cities@bmxseries.com</a></li>
+          <li><a href="mailto:partners@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">partners@bmxseries.com</a></li>
+          <li><a href="mailto:info@bmxseries.com" style="font-size:14px;color:rgba(255,255,255,0.7);text-decoration:none;" style-hover="color:#C2FF1F;">info@bmxseries.com</a></li>
         </ul>
       </div>
       <div>
         <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;">Stay Up To Date</div>
-        <form id="newsletter-form" novalidate style="display:flex;flex-direction:column;gap:10px;max-width:240px;">
-          <label for="newsletter-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Email address</label>
-          <input id="newsletter-email" name="email" type="email" required placeholder="Email address" style="background:#141414;border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:'Archivo',sans-serif;font-size:14px;padding:12px 14px;outline:none;">
-          <button type="submit" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:12px;border:none;cursor:pointer;text-align:center;" class="hv63">Subscribe →</button>
-          <p id="newsletter-status" role="status" style="font-size:12px;color:rgba(255,255,255,0.5);min-height:1.2em;"></p>
-        </form>
+        <div style="display:flex;flex-direction:column;gap:10px;max-width:240px;">
+          <input type="email" placeholder="Email address" style="background:#141414;border:1px solid rgba(255,255,255,0.12);color:#fff;font-family:'Archivo',sans-serif;font-size:14px;padding:12px 14px;outline:none;">
+          <a href="#" style="background:#C2FF1F;color:#0A0A0A;font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:12px;text-decoration:none;text-align:center;" style-hover="background:#fff;">Subscribe →</a>
+        </div>
       </div>
     </div>
     <div style="max-width:1280px;margin:0 auto;padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;">
@@ -724,6 +512,256 @@
 
 </div>
 
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = { now: Date.now(), activeDay: 'fri', faqCat: 'cities', openFaq: 'cities-0', videoOpen: false, partnerTier: 'stop', mobile: false, menuOpen: false };
+
+  componentDidMount() {
+    this._t = setInterval(() => { this.setState({ now: Date.now() }); this.revealCheck(); }, 1000);
+    requestAnimationFrame(() => this.initReveal());
+    this._onScroll = () => this.onScroll();
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll);
+    this._mq = window.matchMedia('(max-width: 860px)');
+    this._onMq = (e) => this.setState({ mobile: e.matches });
+    this.setState({ mobile: this._mq.matches });
+    if (this._mq.addEventListener) this._mq.addEventListener('change', this._onMq);
+    else this._mq.addListener(this._onMq);
+
+    this._mqTablet = window.matchMedia('(max-width: 1024px)');
+    this._onMqTablet = (e) => this.setState({ tabletBP: e.matches });
+    this.setState({ tabletBP: this._mqTablet.matches });
+    if (this._mqTablet.addEventListener) this._mqTablet.addEventListener('change', this._onMqTablet);
+    else this._mqTablet.addListener(this._onMqTablet);
+
+    this._mqPhone = window.matchMedia('(max-width: 640px)');
+    this._onMqPhone = (e) => this.setState({ phoneBP: e.matches });
+    this.setState({ phoneBP: this._mqPhone.matches });
+    if (this._mqPhone.addEventListener) this._mqPhone.addEventListener('change', this._onMqPhone);
+    else this._mqPhone.addListener(this._onMqPhone);
+
+    this.onScroll();
+  }
+  componentWillUnmount() {
+    clearInterval(this._t);
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    if (this._mq) {
+      if (this._mq.removeEventListener) this._mq.removeEventListener('change', this._onMq);
+      else this._mq.removeListener(this._onMq);
+    }
+    if (this._mqTablet) {
+      if (this._mqTablet.removeEventListener) this._mqTablet.removeEventListener('change', this._onMqTablet);
+      else this._mqTablet.removeListener(this._onMqTablet);
+    }
+    if (this._mqPhone) {
+      if (this._mqPhone.removeEventListener) this._mqPhone.removeEventListener('change', this._onMqPhone);
+      else this._mqPhone.removeListener(this._onMqPhone);
+    }
+    document.body.style.overflow = '';
+  }
+
+  initReveal() {
+    const root = this._root;
+    if (!root) return;
+    this._rises = [].slice.call(root.querySelectorAll('[data-rise]'));
+    this._rises.forEach((el) => {
+      el.style.transition = 'opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1)';
+      el.style.willChange = 'opacity, transform';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(36px)';
+    });
+    this.revealCheck();
+    // safety: never leave anything hidden
+    setTimeout(() => {
+      if (this._rises) this._rises.forEach((el) => this.show(el));
+      this._rises = [];
+    }, 2800);
+  }
+
+  show(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  }
+
+  revealCheck() {
+    if (!this._rises || !this._rises.length) return;
+    const vh = window.innerHeight || 800;
+    this._rises = this._rises.filter((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.9 && r.bottom > -40) {
+        this.show(el);
+        return false;
+      }
+      return true;
+    });
+  }
+
+  onScroll() {
+    if (this._hero) {
+      if (this.state.mobile) {
+        this._hero.style.transform = 'none';
+      } else {
+        const y = window.scrollY || 0;
+        this._hero.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+      }
+    }
+    this.revealCheck();
+  }
+
+  renderVals() {
+    const target = new Date('2026-12-31T23:59:59').getTime();
+    const diff = Math.max(0, target - this.state.now);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    const pad = (v, n) => String(v).padStart(n, '0').split('');
+    const countdown = [
+      { label: 'Days', digits: pad(d, 3) },
+      { label: 'Hrs', digits: pad(h, 2) },
+      { label: 'Min', digits: pad(m, 2) },
+      { label: 'Sec', digits: pad(s, 2) },
+    ];
+
+    const stats = [
+      { v: '4–6', l: 'Stops per season' },
+      { v: '50K+', l: 'Spectators per stop' },
+      { v: '60+', l: 'Riders · 30+ countries' },
+      { v: 'W&M', l: 'Two categories, equal' },
+      { v: '~1000m²', l: 'Modular park delivered' },
+    ];
+
+    const citiesList = [
+      'Zero infrastructure cost — full park delivered',
+      'International broadcast & media coverage',
+      '3-day festival format with youth engagement',
+      'Judging framework aligned with international competition standards',
+    ];
+    const sponsorsList = [
+      '78% audience aged 18–35',
+      '~3.2M social reach per stop',
+      '4–6 European markets per season',
+      'Stop, Series & Title partnership levels',
+    ];
+
+    const schedule = {
+      fri: [
+        { time: '10:00', event: 'Open Sessions', sub: 'Park opens — training, public welcome' },
+        { time: '14:00', event: 'City Ride', sub: 'Athletes tour landmark city locations' },
+        { time: '17:00', event: 'Youth Clinic', sub: 'Local riders training with pro athletes' },
+        { time: '20:00', event: 'Opening Ceremony', sub: 'Welcome concert & city celebration' },
+      ],
+      sat: [
+        { time: '10:00', event: 'Qualifications', sub: "Women's & Men's qualification rounds" },
+        { time: '14:00', event: 'Culture & Music', sub: 'Street art activations, live music stage' },
+        { time: '18:00', event: 'Top 8 Confirmed', sub: "Results announced — Women's & Men's finalists" },
+        { time: '20:00', event: 'Sponsor Village', sub: 'Evening programme & activations' },
+      ],
+      sun: [
+        { time: '12:00', event: 'Warm-Up', sub: 'Final park preparation' },
+        { time: '15:00', event: "Women's Final", sub: 'Livestream begins' },
+        { time: '17:00', event: "Men's Final", sub: 'Peak broadcast window' },
+        { time: '19:30', event: 'Podium Ceremony', sub: 'Awards & closing concert' },
+      ],
+    };
+
+    const deliver = [
+      { num: '01', title: 'Mobile BMX Park', body: 'Full modular competition park (~1,000 m²), transported, installed and removed by our crew.' },
+      { num: '02', title: 'Sport Operations', body: 'Competition format, judges, athlete coordination and technical sporting framework.' },
+      { num: '03', title: 'Production & Broadcast', body: 'Stage, PA, lighting, livestream and broadcast-ready camera package included.' },
+      { num: '04', title: 'Festival Programming', body: 'City Ride, youth clinics, music activation and community events.' },
+      { num: '05', title: '60+ International Athletes', body: "Elite riders from 30+ nations — filling your city's hotels and public spaces." },
+      { num: '06', title: 'Communication Support', body: 'BFE Series visual identity, press pack, social content and co-branding.' },
+      { num: '07', title: 'Partner & Fan Activation', body: 'Sponsor integration, fan zones, hospitality concepts and branded experiences built into every stop.' },
+      { num: '08', title: 'Event Management & Safety', body: 'Venue planning, operational schedules, accreditation, risk procedures and coordination with local services.' },
+    ];
+
+    const faq = {
+      cities: [
+        { q: 'Does the host city need an existing BMX park?', a: 'No. BMX Freestyle European Series delivers the full modular competition park as part of the event — transport, installation and dismantling all included.' },
+        { q: 'What kind of venue does the Series need?', a: 'A visible public square, sports plaza, festival area or comparable urban space with approximately 1,000 m² of usable footprint.' },
+        { q: 'What is the hosting fee model?', a: 'The model is discussed individually with each city based on venue, calendar slot and local context. Contact cities@bmxseries.com to start the conversation.' },
+        { q: 'When should cities reach out?', a: 'Now. City conversations for the 2027 season are active. The expression of interest deadline is 31 December 2026 — but the best slots fill first.' },
+      ],
+      sponsors: [
+        { q: 'Can partners activate across multiple countries?', a: 'Yes. The multi-stop model supports both series-wide visibility and local stop activation. Series and Title partners travel with the series across all cities.' },
+        { q: 'Are exclusive category rights available?', a: 'Yes, for Series and Title partner levels. Category exclusivity is discussed individually — contact partners@bmxseries.com.' },
+        { q: 'What audience data is available?', a: "78% aged 18–35, ~3.2M social reach per stop, Women's & Men's categories with equal visibility. Full overview available in the partner briefing." },
+      ],
+      general: [
+        { q: 'What is BMX Freestyle Park?', a: 'An Olympic discipline since Tokyo 2020, also at Paris 2024 and planned for LA 2028. Riders perform tricks on a modular park course, judged on difficulty, execution and style.' },
+        { q: 'Who is behind BMX Freestyle European Series?', a: 'BMX Freestyle European Series is developed by Urban Sports Foundation — an experienced team of sports event producers with a track record in international competitions and urban sports festivals.' },
+        { q: 'Is BMX Freestyle European Series committed to sustainability and equality?', a: 'Yes. Equal prize money for Women\u2019s and Men\u2019s categories, a reusable modular park built for multiple stops, accessible venues, and a culture programme built entirely on local DJs, musicians and graffiti artists in every host city.' },
+      ],
+    };
+
+    const dayDefs = [{ k: 'fri', label: 'Friday' }, { k: 'sat', label: 'Saturday' }, { k: 'sun', label: 'Sunday' }];
+    const days = dayDefs.map(x => ({
+      label: x.label,
+      bg: this.state.activeDay === x.k ? '#C2FF1F' : 'transparent',
+      fg: this.state.activeDay === x.k ? '#0A0A0A' : 'rgba(255,255,255,0.6)',
+      onClick: () => this.setState({ activeDay: x.k }),
+    }));
+
+    const catDefs = [{ k: 'cities', label: 'Cities' }, { k: 'sponsors', label: 'Sponsors' }, { k: 'general', label: 'General' }];
+    const faqCats = catDefs.map(x => ({
+      label: x.label,
+      bg: this.state.faqCat === x.k ? '#C2FF1F' : 'transparent',
+      fg: this.state.faqCat === x.k ? '#0A0A0A' : 'rgba(255,255,255,0.6)',
+      onClick: () => this.setState({ faqCat: x.k, openFaq: x.k + '-0' }),
+    }));
+
+    const tierDefs = [
+      { k: 'stop', label: 'Stop Partner', tag: 'STOP', name: 'Stop Partner', body: 'Activate at a single city. Local visibility, full activation toolkit, regional media reach.' },
+      { k: 'series', label: 'Series Partner', tag: 'SERIES', name: 'Series Partner', body: 'Travel with the Series across all 4–6 cities. Pan-European visibility, content rights across the season, category exclusivity available.' },
+      { k: 'title', label: 'Title Partner', tag: 'TITLE', name: 'Title Partner', body: 'Your name on the series. Maximum exposure across every stop, every broadcast, every market — from launch to final.' },
+    ];
+    const partnerTabs = tierDefs.map(x => ({
+      label: x.label,
+      bg: this.state.partnerTier === x.k ? '#C2FF1F' : 'transparent',
+      fg: this.state.partnerTier === x.k ? '#0A0A0A' : 'rgba(255,255,255,0.6)',
+      onClick: () => this.setState({ partnerTier: x.k }),
+    }));
+    const partnerActive = tierDefs.find(x => x.k === this.state.partnerTier) || tierDefs[0];
+
+    const cat = this.state.faqCat;
+    const faqRows = faq[cat].map((r, i) => {
+      const key = cat + '-' + i;
+      const open = this.state.openFaq === key;
+      return {
+        q: r.q, a: r.a, open,
+        sign: open ? '–' : '+',
+        toggle: () => this.setState({ openFaq: open ? null : key }),
+      };
+    });
+
+    return {
+      countdown, stats, citiesList, sponsorsList, deliver,
+      deliverCols: this.state.phoneBP ? '1fr' : (this.state.tabletBP ? 'repeat(2,1fr)' : 'repeat(4,1fr)'),
+      days, scheduleRows: schedule[this.state.activeDay],
+      faqCats, faqRows, partnerTabs, partnerActive,
+      isMobile: !!this.state.mobile,
+      isDesktop: !this.state.mobile,
+      menuOpen: this.state.menuOpen,
+      galleryCols: this.state.mobile ? 'repeat(2,1fr)' : 'repeat(4,1fr)',
+      galleryRow: this.state.mobile ? '150px' : '200px',
+      openMenu: () => { document.body.style.overflow = 'hidden'; this.setState({ menuOpen: true }); },
+      closeMenu: () => { document.body.style.overflow = ''; this.setState({ menuOpen: false }); },
+      videoOpen: this.state.videoOpen,
+      videoSrc: this.state.videoOpen ? 'https://www.youtube-nocookie.com/embed/2gaGEDtHWeA?autoplay=1&rel=0&modestbranding=1&playsinline=1' : 'about:blank',
+      openVideo: () => this.setState({ videoOpen: true }),
+      closeVideo: () => this.setState({ videoOpen: false }),
+      stop: (e) => { if (e && e.stopPropagation) e.stopPropagation(); },
+      rootRef: (el) => { this._root = el; },
+      heroRef: (el) => { this._hero = el; },
+    };
+  }
+}
+</script>
 
 
 </body></html>
