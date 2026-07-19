@@ -107,6 +107,11 @@
   a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #C2FF1F; outline-offset: 2px; }
   [hidden] { display: none !important; }
   .faq-answer { overflow: hidden; }
+  .faq-answer:not([hidden]) { display: block; }
+  #faq-tabs button, [data-faq-toggle], [data-day-tab], [data-tier-tab] {
+    -webkit-appearance: none; appearance: none; font: inherit; margin: 0; border-radius: 0;
+  }
+  [data-faq-toggle] { text-align: left; }
   @media (prefers-reduced-motion: reduce) {
     [style*="animation"] { animation: none !important; }
     [data-rise] { opacity: 1 !important; transform: none !important; }
