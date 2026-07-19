@@ -59,14 +59,17 @@
     var targetStr = countdownEl.getAttribute("data-target");
     var target = new Date(targetStr).getTime();
     if (isNaN(target)) return; // no configured/parseable date — leave last-known static state alone
-    var now = Date.now();
-    var diff = target - now;
 
-    if (diff <= 0) {
-      countdownEl.hidden = true;
-      if (countdownClosedEl) countdownClosedEl.hidden = false;
-      return;
-    }
+    var diff = target - Date.now();
+    var isClosed = diff <= 0;
+
+    // Single source of truth, applied unconditionally every tick: the two
+    // elements are always set as a pair from the same boolean, so they can
+    // never independently drift out of sync with each other.
+    countdownEl.hidden = isClosed;
+    if (countdownClosedEl) countdownClosedEl.hidden = !isClosed;
+
+    if (isClosed) return;
 
     var totalSeconds = Math.floor(diff / 1000);
     var d = Math.floor(totalSeconds / 86400);
