@@ -107,34 +107,6 @@
 
   setupTabs("[data-day-tab]", "[data-day-panel]", "data-day-tab");
   setupTabs("[data-tier-tab]", "[data-tier-panel]", "data-tier-tab");
-  setupTabs("[data-faq-cat]", "[data-faq-panel]", "data-faq-cat");
-
-  /* ---------- FAQ accordion (independent per item, single-open-per-category like the original design) ---------- */
-  document.querySelectorAll("[data-faq-toggle]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var expanded = btn.getAttribute("aria-expanded") === "true";
-      var panel = document.getElementById(btn.getAttribute("aria-controls"));
-      var sign = btn.querySelector("[data-faq-sign]");
-
-      // Close other open items within the same FAQ category panel only.
-      var container = btn.closest("[data-faq-panel]");
-      if (container) {
-        container.querySelectorAll("[data-faq-toggle]").forEach(function (other) {
-          if (other !== btn) {
-            other.setAttribute("aria-expanded", "false");
-            var otherPanel = document.getElementById(other.getAttribute("aria-controls"));
-            if (otherPanel) otherPanel.hidden = true;
-            var otherSign = other.querySelector("[data-faq-sign]");
-            if (otherSign) otherSign.textContent = "+";
-          }
-        });
-      }
-
-      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
-      if (panel) panel.hidden = expanded;
-      if (sign) sign.textContent = expanded ? "+" : "–";
-    });
-  });
 
   /* ---------- Scroll reveal ---------- */
   var riseEls = document.querySelectorAll("[data-rise]");
@@ -220,3 +192,91 @@
     });
   }
 })();
+
+/* ===================================================================
+ * BFES FAQ — fully isolated component. No dependency on the IIFE
+ * above, no shared state, no globally-delegated listeners. Finds its
+ * own root by a single unique selector and no-ops if absent.
+ * =================================================================== */
+function initFaq() {
+  "use strict";
+
+  var root = document.querySelector("[data-bfes-faq]");
+  if (!root) return;
+
+  var tabs = root.querySelectorAll(".bfes-faq-tab");
+  var panels = root.querySelectorAll(".bfes-faq-panel");
+  var questions = root.querySelectorAll(".bfes-faq-question");
+
+  function closeQuestion(btn) {
+    var answer = document.getElementById(btn.getAttribute("aria-controls"));
+    var icon = btn.querySelector(".bfes-faq-icon");
+    btn.setAttribute("aria-expanded", "false");
+    if (answer) answer.hidden = true;
+    if (icon) icon.textContent = "+";
+  }
+
+  function openQuestion(btn) {
+    var answer = document.getElementById(btn.getAttribute("aria-controls"));
+    var icon = btn.querySelector(".bfes-faq-icon");
+    btn.setAttribute("aria-expanded", "true");
+    if (answer) answer.hidden = false;
+    if (icon) icon.textContent = "\u2212";
+  }
+
+  function closeAllQuestions() {
+    questions.forEach(closeQuestion);
+  }
+
+  function activateTab(tab) {
+    var targetPanelId = tab.getAttribute("aria-controls");
+
+    tabs.forEach(function (t) {
+      t.setAttribute("aria-selected", t === tab ? "true" : "false");
+    });
+
+    panels.forEach(function (panel) {
+      var isTarget = panel.id === targetPanelId;
+      panel.hidden = !isTarget;
+      panel.setAttribute("aria-hidden", isTarget ? "false" : "true");
+    });
+
+    // Changing category always resets question state — no carried-over
+    // open answers, no auto-opened question.
+    closeAllQuestions();
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      activateTab(tab);
+    });
+  });
+
+  questions.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var isOpen = btn.getAttribute("aria-expanded") === "true";
+      var panel = btn.closest(".bfes-faq-panel");
+
+      if (panel) {
+        panel.querySelectorAll(".bfes-faq-question").forEach(function (other) {
+          if (other !== btn) closeQuestion(other);
+        });
+      }
+
+      if (isOpen) {
+        closeQuestion(btn);
+      } else {
+        openQuestion(btn);
+      }
+    });
+  });
+
+  // Initial state: Cities active, everything else hidden, all questions closed.
+  closeAllQuestions();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initFaq);
+} else {
+  initFaq();
+}
