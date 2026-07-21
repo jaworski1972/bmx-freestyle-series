@@ -155,7 +155,7 @@
   <!-- STATS MARQUEE -->
   <div style="background:#C2FF1F;color:#0A0A0A;overflow:hidden;white-space:nowrap;border-top:2px solid #0A0A0A;border-bottom:2px solid #0A0A0A;">
     <div style="display:inline-flex;animation:bfec-scroll-rev 30s linear infinite;font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:15px;letter-spacing:0.03em;text-transform:uppercase;padding:12px 0;">
-      <span style="padding:0 24px;">50K+ spectators / stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">60+ riders</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~3.2M social reach</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~1000m² park</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">50K+ spectators / stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">60+ riders</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~3.2M social reach</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~1000m² park</span><span style="padding:0 24px;">●</span>
+      <span style="padding:0 24px;">50K+ spectators / stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">150+ athletes per stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~3.2M social reach</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~1000m² park</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">50K+ spectators / stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">150+ athletes per stop</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~3.2M social reach</span><span style="padding:0 24px;">●</span><span style="padding:0 24px;">~1000m² park</span><span style="padding:0 24px;">●</span>
     </div>
   </div>
 
@@ -319,7 +319,7 @@
       <div data-rise="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-bottom:clamp(48px,7vw,90px);">
         <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;">4–6</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Events per season</div></div>
         <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;">50K+</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">On-site spectators / stop</div></div>
-        <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;">60+</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Athletes</div></div>
+        <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;">150+</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Athletes per stop</div></div>
         <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#C2FF1F;">~3.2M</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Social reach / stop</div></div>
         <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;color:#C2FF1F;">78%</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Audience aged 18–35</div></div>
         <div style="background:#0A0A0A;padding:24px 20px;"><div style="font-family:'Archivo Expanded',sans-serif;font-weight:900;font-size:clamp(30px,4vw,52px);line-height:1;">W &amp; M</div><div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:8px;">Equal visibility, both categories</div></div>
@@ -661,7 +661,7 @@ class Component extends DCLogic {
     const stats = [
       { v: '4–6', l: 'Stops per season' },
       { v: '50K+', l: 'Visitors per stop' },
-      { v: '150+', l: 'Riders per stop' },
+      { v: '150+', l: 'Athletes per stop' },
       { v: 'W&M', l: 'Two categories, equal' },
       { v: '~1000m²', l: 'Modular park delivered' },
     ];
@@ -705,7 +705,7 @@ class Component extends DCLogic {
       { num: '02', title: 'Sport Operations', body: 'Competition format, judges, athlete coordination and technical sporting framework.' },
       { num: '03', title: 'Production & Broadcast', body: 'Stage, PA, lighting, livestream and broadcast-ready camera package included.' },
       { num: '04', title: 'Festival Programming', body: 'City Ride, youth clinics, music activation and community events.' },
-      { num: '05', title: '60+ International Athletes', body: "Elite riders from 30+ nations — filling your city's hotels and public spaces." },
+      { num: '05', title: '150+ Athletes Per Stop', body: "Elite riders filling your city's hotels and public spaces." },
       { num: '06', title: 'Communication Support', body: 'Series visual identity, press pack, social content and co-branding.' },
       { num: '07', title: 'Partner & Fan Activation', body: 'Sponsor integration, fan zones, hospitality concepts and branded experiences built into every stop.' },
       { num: '08', title: 'Event Management & Safety', body: 'Venue planning, operational schedules, accreditation, risk procedures and coordination with local services.' },
