@@ -192,7 +192,7 @@ def activation(c):
     label(c, "02 — koncepcja obecności marki", 38, H - 42)
     c.setFillColor(WHITE)
     c.setFont("Sans-Bold", 29)
-    c.drawString(38, H - 83, "PACZKOMAT WCHODZI NA PARK.")
+    c.drawString(38, H - 83, "PACZKOMAT STAJE SIĘ CZĘŚCIĄ PARKU.")
     c.drawImage(ImageReader(str(PARK)), 38, 83, 440, 330, preserveAspectRatio=True, anchor="c", mask="auto")
     c.setFillColor(YELLOW)
     c.rect(52, 96, 120, 19, fill=1, stroke=0)
