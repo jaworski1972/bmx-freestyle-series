@@ -29,9 +29,10 @@
     .nav-links a{text-decoration:none}.nav-links a:hover{color:var(--yellow)}
     .pdf-button{background:var(--yellow);color:#050505!important;padding:11px 17px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
     .hero{min-height:760px;display:flex;align-items:flex-end;position:relative;isolation:isolate;padding:120px 0 68px;background:#050505;overflow:hidden}
-    .hero-video{position:absolute;inset:0;z-index:-2;overflow:hidden;background:#050505}
+    .hero-video{position:absolute;inset:0;z-index:0;overflow:hidden;background:#050505}
     .hero-video iframe{position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:122%;min-width:217vh;transform:translate(-50%,-50%);border:0;pointer-events:none;filter:grayscale(1) contrast(1.06) brightness(.58)}
-    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.66) 45%,rgba(0,0,0,.18) 78%),linear-gradient(0deg,#090909 0%,transparent 38%)}
+    .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.66) 45%,rgba(0,0,0,.18) 78%),linear-gradient(0deg,#090909 0%,transparent 38%)}
+    .hero>.wrap{position:relative;z-index:2}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,203,5,.65);background:rgba(0,0,0,.62);color:var(--yellow);padding:8px 12px;font:700 11px "Space Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
     .eyebrow:before{content:"";width:7px;height:7px;background:var(--yellow);border-radius:50%}
     h1{font-size:clamp(52px,8.3vw,112px);line-height:.86;letter-spacing:-.065em;text-transform:uppercase;max-width:980px;margin:25px 0 30px;font-weight:900}
